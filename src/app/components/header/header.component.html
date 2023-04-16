@@ -1,0 +1,51 @@
+<nav class="navbar  navbar-expand-lg bg-transparent py-3">
+  <div class="container-fluid">
+       <a class="navbar-brand" href="#" class="fs-3 fw-bold text-decoration-none fst-italic text-white">Service Request</a>
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+
+
+        <li class="nav-item">
+          <a class="nav-link fw-bold me-5 text-white" aria-current="page" href="#" routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold me-5 text-white" href="#" routerLink="/contact"
+            routerLinkActive="active-link">Contact Us</a>
+        </li>
+
+
+      </ul>
+
+
+      <form class="d-flex" role="login">
+
+          <div class="form-group me-5">
+            <select id="inputState" class="form-select border border-0 bg-green text-white fw-bold">
+              <option selected>Select City</option>
+              <option>Chennai</option>
+               <option>Dharmapuri</option>
+                <option>Kanchipuram</option>
+                 <option>Selam</option>
+                  <option>Krishnagiri</option>
+                   <option>Trichy</option>
+                    <option>Karur</option>
+                     <option>Namakkal</option>
+                      <option>Pudukottai</option>
+                       <option>Tanjore</option>
+
+            </select>
+          </div>
+
+        <button class="btn btn-dark fw-bold" type="submit" routerLink="/authenticate/login">Login</button>
+      </form>
+    </div>
+  </div>
+</nav>
