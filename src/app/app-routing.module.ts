@@ -11,7 +11,10 @@ const routes: Routes = [
   {
     path: 'home', component:HomeComponent
   },
-  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) }];
+  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+
+
+  { path: 'authenticate', loadChildren: () => import('./authenticate/authenticate.module').then(m => m.AuthenticateModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

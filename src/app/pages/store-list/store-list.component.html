@@ -1,89 +1,163 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb ps-5 py-3 bg-light">
     <li class="breadcrumb-item"><a class="text-decoration-none text-dark fw-semibold" routerLink="/home">Home</a></li>
-    <li class="breadcrumb-item"><a class="text-decoration-none text-dark  fw-semibold" routerLink="/pages/automotive">Automotive Service</a></li>
-    <li class="breadcrumb-item"><a class="text-decoration-none text-dark  fw-semibold" routerLink="/home">Car Service</a></li>
+    <li class="breadcrumb-item"><a class="text-decoration-none text-dark  fw-semibold"
+        routerLink="/pages/automotive">Automotive Service</a></li>
+    <li class="breadcrumb-item"><a class="text-decoration-none text-dark  fw-semibold" routerLink="/home">Car
+        Service</a></li>
     <li class="breadcrumb-item active fw-semibold text-primary" aria-current="page">Store List</li>
   </ol>
 </nav>
 <div class="bg-light">
   <div class="container">
     <div class="row">
+      <!---------------------Filter-Page----->
       <div class="col-md-3 mt-5">
-        <div class="filter-details bg-white rounded-3">
-          <p class="fw-bold ps-3 pt-3"><i class="fa fa-filter" aria-hidden="true"></i> &nbsp; All Filters</p>
-          <hr>
-          <div class="filter-title ps-3 mt-2">
-            <p class="fw-bold">Location</p>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Chennai
-              </label>
+        <div class="sticky-top">
+          <div class="filter-details bg-white rounded-3 pb-2">
+            <p class="fw-bold ps-3 pt-3"><i class="fa fa-filter" aria-hidden="true"></i> &nbsp; All Filters</p>
+            <hr>
+            <div class="filter-title ps-3 mt-2">
+              <p class="fw-bold mb-0">Make by Vehicle</p>
+              <div class="form-check" *ngFor="let vehicles of vehicle">
+
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                  value="{{vehicles.vehicle}}" (change)="onVehicle($event)">
+                <label class="form-check-label fw-semibold " for="flexRadioDefault2">
+                  {{vehicles.name}}
+                </label>
+              </div>
             </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Madurai
-              </label>
+            <div class="filter-title ps-3 mt-2">
+              <p class="fw-bold mb-0">Make by Brand</p>
+              <div class="form-check" *ngFor="let brand of brands">
+                <input class="form-check-input" type="radio" name="flexCheckDefault" value="{{brand.brand}}"
+                  id="flexRadioDefault" (change)="onBrand($event)">
+                <label class="form-check-label fw-semibold" for="flexRadioDefault">
+                  {{brand.name}}
+                </label>
+              </div>
             </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Salem
-              </label>
+            <div class="filter-title ps-3 mt-2">
+              <p class="fw-bold mb-0">Make by Model</p>
+              <div class="form-check" *ngFor="let models of model">
+                <input class="form-check-input" type="radio" value="" id="flexRadiokDefault">
+                <label class="form-check-label fw-semibold" for="flexCheckDefault">
+                  {{models.variant}}
+                </label>
+              </div>
             </div>
+          </div>
+          <!---------------------------->
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Pudukottai
-              </label>
-            </div>
+          <!--------------------------sort-page------------------------->
+          <div class="filter-details bg-white rounded-3 mt-2 pb-2">
+            <p class="fw-bold ps-3 pt-3"><i class="fa fa fa-sort" aria-hidden="true"></i> &nbsp; Sort By</p>
+            <hr>
+            <div class="filter-title ps-3 mt-1">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="">
+                <label class="form-check-label fw-semibold " for="flexRadioDefault2">
+                  Likes
+                </label>
+              </div>
 
+              <div class="form-check mb-1">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="">
+                <label class="form-check-label fw-semibold " for="flexRadioDefault2">
+                  Views
+                </label>
+              </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Tanjore
-              </label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Sivagangai
-              </label>
-            </div>
-
-            <div class="form-check pb-2">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Krishnagiri
-              </label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="">
+                <label class="form-check-label fw-semibold " for="flexRadioDefault2">
+                  Appoinments
+                </label>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-8">
-        <div class="bg-white rounded-3 mt-5">
-          <div class="store-name py-3 px-3">
-            <h3 class="fw-bold">SKY Automobiles Service Center</h3>
-            <p class="text-secondary fw-semibold">Powerfull Equipments</p>
-            <p class="text-secondary fs-6 text-uppercase">car &#10072; bike &#10072; van &#10072; truck &#10072; bus
-            </p>
-            <div class="text-center">
-            <button type="button" class="btn btn-size fw-bold btn-primary me-5"><i class="fa fa-calendar"
-              aria-hidden="true"></i>&nbsp; Make an Appoinment</button>
-           <button type="button"
-              class="btn btn-size fw-bold btn-danger" routerLink="/pages/store-details"><i class="fa fa-address-card-o"
-                aria-hidden="true"></i>&nbsp; View Store</button>
-                </div>
+      <!--------------------------------------->
+
+
+      <!---------------------Details-Page----->
+      <div class="col-md-7 mt-5">
+        <div class="bg-white rounded-3 row mb-2 py-3" *ngFor="let detail of details">
+
+          <div class="col-md-3 mx-auto my-auto rounded-3">
+            <div class="store-img">
+              <img src="{{detail.image}}" alt="" class="store-img-size">
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="store-name py-3 px-2">
+              <h6 class="fw-bold">{{detail.name}}</h6>
+              <p class="text-secondary fw-semibold my-0">{{detail.specail}}</p>
+              <p class="text-secondary fs-6 text-uppercase my-0">car &#10072; bike &#10072; van &#10072; truck
+                &#10072;
+                bus
+              </p>
+              <p class="text-secondary  mb-0 fw-semibold">Location: {{detail.location}}</p>
+              <div class="reviews">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="text-secondary"> 4.5</span>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-md-4 text-center my-auto border border-2 border-top-0 border-bottom-0 border-end-0">
+            <button type="button" class="btn btn-size fw-bold btn-primary "><i class="fa fa-calendar"
+                aria-hidden="true"></i>&nbsp; Appoinment
+            </button> <br> <br>
+
+
+            <button type="button" class="btn btn-size fw-bold btn-outline-danger" routerLink="/pages/store-details"><i
+                class="heart fa fa-address-card-o" aria-hidden="true"></i>&nbsp; View Store
+            </button>
+          </div>
+
+          <div class="col-md-4 text-center fw-semibold">
+            <span><i class="fa fa-heart-o" aria-hidden="true" [class.highlighted]="isActive" (click)="onClick()"></i>
+            </span>
+            Likes
+          </div>
+          <div class="col-md-4 text-center fw-semibold">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            Views
+          </div>
+          <div class="col-md-4 text-center fw-semibold">
+            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+            Appoinment
+          </div>
+
+        </div>
+      </div>
+      <!---------------------------->
+
+      <!---------------------Ad-Page----->
+      <div class="col-md-2 ad-logo mt-5">
+        <div class="sticky-top">
+          <div class="bg-white rounded-3 py-3 ">
+            <img src="./assets/store-details/Add_1.png" alt="ad-1" class="img-size">
+          </div>
+          <div class="bg-white rounded-3 py-3 mt-2">
+            <img src="./assets/store-details/Add_2.png" alt="ad-1" class="img-size">
+          </div>
+          <div class="bg-white rounded-3 py-3 mt-2 ">
+            <img src="./assets/store-details/Add_3.png" alt="ad-1" class="img-size">
           </div>
         </div>
       </div>
+      <!-------------------->
     </div>
   </div>
 </div>

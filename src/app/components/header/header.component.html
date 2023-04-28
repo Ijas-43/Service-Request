@@ -27,24 +27,14 @@
 
       <form class="d-flex" role="login">
 
-          <div class="form-group me-5">
-            <select id="inputState" class="form-select border border-0 bg-green text-white fw-bold">
-              <option selected>Select City</option>
-              <option>Chennai</option>
-               <option>Dharmapuri</option>
-                <option>Kanchipuram</option>
-                 <option>Selam</option>
-                  <option>Krishnagiri</option>
-                   <option>Trichy</option>
-                    <option>Karur</option>
-                     <option>Namakkal</option>
-                      <option>Pudukottai</option>
-                       <option>Tanjore</option>
-
+          <div class="form-group me-5" >
+            <select  id="inputState" class="form-select border border-0 bg-green text-white fw-bold" style="width: 150px;" (change)="citi($event)">
+              <option selected >Select City</option>
+              <option  *ngFor="let cities of city">{{cities.city}}</option>
             </select>
           </div>
 
-        <button class="btn btn-dark fw-bold" type="submit" routerLink="/authenticate/login">Login</button>
+        <button class="btn btn-dark fw-bold" type="submit" routerLink="/authenticate/sign-in">Login</button>
       </form>
     </div>
   </div>
