@@ -19,7 +19,7 @@ body {
 }
 
 a {
-  color: rgb(19, 139, 19);
+  color: #276B6A;
   text-decoration: none;
 }
 
@@ -63,7 +63,7 @@ h6 {
   font-size: 24px;
   margin-bottom: 0;
   font-weight: 600;
-  color: green;
+  color: #276B6A
 }
 
 /*--------------------------------------------------------------
@@ -76,7 +76,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: rgb(19, 139, 19);
+  background: #276B6A;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -257,7 +257,7 @@ h6 {
   padding: 20px 0 15px 0;
   font-size: 18px;
   font-weight: 500;
-  color: green;
+  color: #276B6A;
   font-family: "Poppins", sans-serif;
 }
 
@@ -303,7 +303,7 @@ h6 {
 }
 
 .accordion-button:not(.collapsed) {
-  color: green;
+  color: #276B6A;
   background-color: #f6f9ff;
 }
 
@@ -315,7 +315,7 @@ h6 {
 
 .accordion-flush .accordion-button:not(.collapsed) {
   box-shadow: none;
-  color: rgb(19, 139, 19);
+  color: #276B6A;
 }
 
 .accordion-flush .accordion-body {
@@ -363,13 +363,13 @@ h6 {
 
 .nav-tabs-bordered .nav-link:hover,
 .nav-tabs-bordered .nav-link:focus {
-  color: rgb(19, 139, 19);
+  color: #276B6A;
 }
 
 .nav-tabs-bordered .nav-link.active {
   background-color: whitesmoke;
-  color: rgb(19, 139, 19);
-  border-bottom: 2px solid rgb(19, 139, 19);
+  color: #276B6A;
+  border-bottom: 2px solid #276B6A;
 }
 
 /*--------------------------------------------------------------
@@ -393,7 +393,7 @@ h6 {
 .logo span {
   font-size: 26px;
   font-weight: 700;
-  color: green;
+  color: #276B6A;
   font-family: "Nunito", sans-serif;
 }
 
@@ -412,7 +412,7 @@ h6 {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
-  color: green;
+  color: #276B6A;
 }
 
 .header .search-bar {
@@ -449,7 +449,7 @@ h6 {
 .header .search-form input {
   border: 0;
   font-size: 14px;
-  color: green;
+  color: #276B6A;
   border: 1px solid rgba(1, 41, 112, 0.2);
   padding: 7px 38px 7px 8px;
   border-radius: 3px;
@@ -472,7 +472,7 @@ h6 {
 }
 
 .header .search-form button i {
-  color: green;
+  color: #276B6A;
 }
 
 /*--------------------------------------------------------------
@@ -489,11 +489,11 @@ h6 {
 
 .header-nav .nav-icon {
   font-size: 20px;
-  color: green;
+  color: #276B6A;
 }
 
 .header-nav .nav-profile {
-  color: green;
+  color: #276B6A;
 }
 
 .header-nav .nav-profile img {
@@ -692,7 +692,7 @@ h6 {
   align-items: center;
   font-size: 15px;
   font-weight: 600;
-  color: rgb(19, 139, 19);
+  color: #276B6A;
   transition: 0.3;
   background: #f6f9ff;
   padding: 10px 15px;
@@ -702,11 +702,11 @@ h6 {
 .sidebar-nav .nav-link i {
   font-size: 16px;
   margin-right: 10px;
-  color: rgb(19, 139, 19);
+  color: #276B6A;
 }
 
 .sidebar-nav .nav-link.collapsed {
-  color: green;
+  color: #276B6A;
   background: whitesmoke;
 }
 
@@ -715,12 +715,12 @@ h6 {
 }
 
 .sidebar-nav .nav-link:hover {
-  color: rgb(19, 139, 19);
+  color:#276B6A;
   background: #f6f9ff;
 }
 
 .sidebar-nav .nav-link:hover i {
-  color: rgb(19, 139, 19);
+  color:#276B6A;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -743,7 +743,7 @@ h6 {
   align-items: center;
   font-size: 14px;
   font-weight: 600;
-  color: green;
+  color: #276B6A;
   transition: 0.3;
   padding: 10px 0 10px 40px;
   transition: 0.3s;
@@ -758,11 +758,11 @@ h6 {
 
 .sidebar-nav .nav-content a:hover,
 .sidebar-nav .nav-content a.active {
-  color: rgb(19, 139, 19);
+  color:#276B6A;
 }
 
 .sidebar-nav .nav-content a.active i {
-  background-color: rgb(19, 139, 19);
+  background-color: #276B6A;
 }
 
 /*--------------------------------------------------------------
@@ -785,7 +785,7 @@ h6 {
 
 .dashboard .filter .icon:hover,
 .dashboard .filter .icon:focus {
-  color: rgb(19, 139, 19);
+  color: #276B6A;
 }
 
 .dashboard .filter .dropdown-header {
@@ -813,7 +813,7 @@ h6 {
 
 .dashboard .info-card h6 {
   font-size: 28px;
-  color: green;
+  color: #276B6A;
   font-weight: 700;
   margin: 0;
   padding: 0;
@@ -1437,7 +1437,7 @@ a:hover {
 //   padding: 5px;
 // }
 .carousel-item img{
-  height:640px
+  height:540px
   }
   .carousel-caption h1{
   color: whitesmoke;

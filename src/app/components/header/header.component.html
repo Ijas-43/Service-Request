@@ -10,8 +10,13 @@
 
 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-
+<img src="./assets/banner/india-flag.svg" alt="" width="30">
+        <div class="form-group me-5" >
+          <select  id="inputState" class="form-select border border-0 bg-green text-white fw-bold" style="width: 150px;" (change)="citi($event)">
+            <option selected >Select City</option>
+            <option  *ngFor="let cities of city">{{cities.city}}</option>
+          </select>
+        </div>
 
         <li class="nav-item">
           <a class="nav-link fw-bold me-5 text-white" aria-current="page" href="#" routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
@@ -27,12 +32,7 @@
 
       <form class="d-flex" role="login">
 
-          <div class="form-group me-5" >
-            <select  id="inputState" class="form-select border border-0 bg-green text-white fw-bold" style="width: 150px;" (change)="citi($event)">
-              <option selected >Select City</option>
-              <option  *ngFor="let cities of city">{{cities.city}}</option>
-            </select>
-          </div>
+
 
         <button class="btn btn-dark fw-bold" type="submit" routerLink="/authenticate/sign-in">Login</button>
       </form>

@@ -54,6 +54,28 @@
 
           <!--------------------------sort-page------------------------->
           <div class="filter-details bg-white rounded-3 mt-2 pb-2">
+            <p class="fw-bold ps-3 pt-3"><i class="fa fa fa-cogs" aria-hidden="true"></i> &nbsp; Service Types</p>
+            <hr>
+            <div class="filter-title ps-3 mt-1">
+              <div class="form-check mb-2" *ngFor="let complain of complaints">
+                <!-- | slice : startPage:paginationLimit" -->
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" value="">
+                <label class="form-check-label fw-semibold " for="flexRadioDefault2">
+                  {{complain.service}}
+                </label>
+              </div>
+              <!-- <button *ngIf ="paginationLimit < complaints.length" (click)="showMoreItems()">
+                Show More
+               </button>
+               <button *ngIf ="paginationLimit > 10" (click)="showLessItems()">
+                Show Less
+               </button> -->
+            </div>
+          </div>
+
+          <!--------------------service types-->
+          <!--------------------------sort-page------------------------->
+          <div class="filter-details bg-white rounded-3 mt-2 pb-2">
             <p class="fw-bold ps-3 pt-3"><i class="fa fa fa-sort" aria-hidden="true"></i> &nbsp; Sort By</p>
             <hr>
             <div class="filter-title ps-3 mt-1">
@@ -79,81 +101,179 @@
               </div>
             </div>
           </div>
+          <!---------------------end------------>
         </div>
       </div>
       <!--------------------------------------->
 
 
       <!---------------------Details-Page----->
-      <div class="col-md-7 mt-5">
-        <div class="bg-white rounded-3 row mb-2 py-3" *ngFor="let detail of details">
+      <div class="col-md-9">
 
-          <div class="col-md-3 mx-auto my-auto rounded-3">
-            <div class="store-img">
-              <img src="{{detail.image}}" alt="" class="store-img-size">
+        <!-----------details-page-header------->
+        <div class="row">
+
+          <div class="col-md-12 py-2 mt-5">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="text-danger fw-bold">Total Bussinesses in your Area - 123</p>
+              </div>
+              <div class="col-md-3 text-center">
+                <p class="text-primary fw-bold">For Marketing- <a href="" class="text-decoration-none">Contact us</a>
+                </p>
+              </div>
+              <div class="col-md-3 text-center">
+                <a class="text-dark text-decoration-none fw-bold"
+                  title="Incase Your Favourite Store is not show in the website please fill the form we will contact the store soon as possible"
+                  style="cursor: pointer;" (click)="toggleTag()"> List
+                  Your Bussiness Service
+                  Here</a>
+
+              </div>
             </div>
           </div>
-          <div class="col-md-5">
-            <div class="store-name py-3 px-2">
-              <h6 class="fw-bold">{{detail.name}}</h6>
-              <p class="text-secondary fw-semibold my-0">{{detail.specail}}</p>
-              <p class="text-secondary fs-6 text-uppercase my-0">car &#10072; bike &#10072; van &#10072; truck
-                &#10072;
-                bus
-              </p>
-              <p class="text-secondary  mb-0 fw-semibold">Location: {{detail.location}}</p>
-              <div class="reviews">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <span class="text-secondary"> 4.5</span>
+
+          <!--------------------end------------>
+
+          <div class="col-md-9">
+            <div class="bg-white rounded-3 row mb-2 py-3" *ngFor="let detail of details">
+
+              <div class="col-md-3 mx-auto my-auto rounded-3">
+                <div class="store-img">
+                  <img src="{{detail.image}}" alt="" class="store-img-size">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="store-name py-3 px-2">
+                  <h6 class="fw-bold">{{detail.name}}</h6>
+                  <p class="text-secondary fw-semibold my-0">{{detail.specail}}</p>
+                  <p class="text-secondary fs-6 text-uppercase my-0">car &#10072; bike &#10072; van &#10072; truck
+                    &#10072;
+                    bus
+                  </p>
+                  <p class="text-secondary  mb-0 fw-semibold">Location: {{detail.location}}</p>
+                  <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span class="text-secondary"> 4.5</span>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="col-md-4 text-center my-auto border border-2 border-top-0 border-bottom-0 border-end-0 ">
+                <button type="button" class="btn btn-size fw-bold btn-primary "><i class="fa fa-calendar"
+                    aria-hidden="true"></i>&nbsp; Appoinment
+                </button> <br> <br>
+
+
+                <button type="button" class="btn btn-size fw-bold btn-outline-danger" (click)="views(detail)"
+                  routerLink="/pages/store-details"><i class="heart fa fa-address-card-o" aria-hidden="true"></i>&nbsp;
+                  View Store &nbsp;
+                </button>
+              </div>
+
+              <div class="col-md-4 text-center fw-semibold col-4">
+                <span (click)="increase(detail)"><i class="fa fa-heart-o" aria-hidden="true"
+                    [class.highlighted]="isActive" (click)="onClick()"></i>
+                </span>
+                {{detail.quantity}} Likes
+              </div>
+              <div class="col-md-4 text-center fw-semibold col-4">
+                <span> <i class="fa fa-eye" aria-hidden="true"></i></span>
+                {{detail.views}} Views
+              </div>
+              <div class="col-md-4 text-center fw-semibold col-4">
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                32 Appoinment
               </div>
 
             </div>
+          </div>
+          <!---------------------------->
 
-          </div>
-          <div class="col-md-4 text-center my-auto border border-2 border-top-0 border-bottom-0 border-end-0">
-            <button type="button" class="btn btn-size fw-bold btn-primary "><i class="fa fa-calendar"
-                aria-hidden="true"></i>&nbsp; Appoinment
-            </button> <br> <br>
+          <!---------------------Ad-Page----->
+          <div class="col-md-3 ad-logo">
+            <div class="sticky-top">
+              <div class="shopping-cart rounded-3 bg-white mb-3" *ngIf="showMe">
+                <p class="text-primary text-center">Please fill below form</p>
+                <div class="box mx-3">
+                  <form class="row g-3 form-size">
+                    <div class="col-12">
+                      <label for="formGroupExampleInput2" class="form-label">Enter Name</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ex: John Harry">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputEmail4" class="form-label">Enter Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Ex: info@gmail.com">
+                    </div>
 
+                    <div class="col-12">
+                      <label for="inputEmail4" class="form-label">Enter Phone no</label>
+                      <div class="input-group">
+                        <div class="input-group-text">+91</div>
+                        <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="999 99 999">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="inputState" class="form-label">Enter State</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
 
-            <button type="button" class="btn btn-size fw-bold btn-outline-danger" routerLink="/pages/store-details"><i
-                class="heart fa fa-address-card-o" aria-hidden="true"></i>&nbsp; View Store
-            </button>
-          </div>
+                    <div class="col-12">
+                      <label for="inputState" class="form-label">Enter City</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label for="formGroupExampleInput2" class="form-label">Enter Store Name</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ex: John Harry">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputEmail4" class="form-label">Enter Store Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Ex: info@gmail.com">
+                    </div>
 
-          <div class="col-md-4 text-center fw-semibold">
-            <span><i class="fa fa-heart-o" aria-hidden="true" [class.highlighted]="isActive" (click)="onClick()"></i>
-            </span>
-            Likes
-          </div>
-          <div class="col-md-4 text-center fw-semibold">
-            <i class="fa fa-eye" aria-hidden="true"></i>
-            Views
-          </div>
-          <div class="col-md-4 text-center fw-semibold">
-            <i class="fa fa-calendar-o" aria-hidden="true"></i>
-            Appoinment
-          </div>
-
-        </div>
-      </div>
-      <!---------------------------->
-
-      <!---------------------Ad-Page----->
-      <div class="col-md-2 ad-logo mt-5">
-        <div class="sticky-top">
-          <div class="bg-white rounded-3 py-3 ">
-            <img src="./assets/store-details/Add_1.png" alt="ad-1" class="img-size">
-          </div>
-          <div class="bg-white rounded-3 py-3 mt-2">
-            <img src="./assets/store-details/Add_2.png" alt="ad-1" class="img-size">
-          </div>
-          <div class="bg-white rounded-3 py-3 mt-2 ">
-            <img src="./assets/store-details/Add_3.png" alt="ad-1" class="img-size">
+                    <div class="col-12">
+                      <label for="inputEmail4" class="form-label">Enter Store Phone no</label>
+                      <div class="input-group">
+                        <div class="input-group-text">+91</div>
+                        <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="999 99 999">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label">Address 1</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress2" class="form-label">Address 2</label>
+                      <input type="text" class="form-control" id="inputAddress2"
+                        placeholder="Apartment, studio, or floor">
+                    </div>
+                  </form>
+                  <div class="col-12 py-2 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-3 py-3 ">
+                <img src="./assets/store-details/Add_1.png" alt="ad-1" class="img-size">
+              </div>
+              <div class="bg-white rounded-3 py-3 mt-2">
+                <img src="./assets/store-details/Add_2.png" alt="ad-1" class="img-size">
+              </div>
+              <div class="bg-white rounded-3 py-3 mt-2 ">
+                <img src="./assets/store-details/Add_3.png" alt="ad-1" class="img-size">
+              </div>
+            </div>
           </div>
         </div>
       </div>

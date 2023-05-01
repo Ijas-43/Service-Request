@@ -2122,6 +2122,8 @@ export class ApiserviceService {
      special: 'Powerfull Equipments',
       city: 'TN-Chennai',
       location: 'Aavadi, chennai',
+      quantity: 0,
+      views: 0,
     },
     {
       id: 2,
@@ -2130,6 +2132,8 @@ export class ApiserviceService {
      special: 'Powerfull Equipments',
       city: 'TN-Coimbatore',
       location: 'Raja st, Coimbatore',
+      quantity: 0,
+      views: 0,
     },
     {
       id: 3,
@@ -2138,6 +2142,8 @@ export class ApiserviceService {
      special: 'Powerfull Equipments',
       city: 'TN-Madurai',
       location: 'Karuppur, Kumbakonam',
+      quantity: 0,
+      views: 0,
     },
     {
       id: 4,
@@ -2146,6 +2152,8 @@ export class ApiserviceService {
      special: 'Powerfull Equipments',
       city: 'TN-Tuticorin',
       location: 'New St, Tuticorin',
+      quantity: 0,
+      views: 0,
     },
     {
       id:5,
@@ -2154,6 +2162,8 @@ export class ApiserviceService {
      special: 'Powerfull Equipments',
       city:'TN-Tiruchirappalli',
       location: 'T.V.S Tolgate, Tiruchirappalli',
+      quantity: 0,
+      views: 0,
     },
   ];
 
