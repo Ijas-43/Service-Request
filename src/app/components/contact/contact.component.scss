@@ -1,0 +1,22 @@
+.box-shadow{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.underline-size{
+  border:2px solid #276B6A;
+  opacity: 1;
+  width: 80px;
+}
+.location_icon{
+font-size: 40px;
+border: 2px dotted #276B6A;
+border-radius: 50%;
+color: #276B6A;
+}
+.btn-green{
+  background-color: #276B6A;
+}
+.form-control:focus
+{
+  box-shadow: none;
+  border: 1px solid black;
+}

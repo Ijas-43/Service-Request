@@ -1,0 +1,31 @@
+<body id="body-pd">
+  <app-headers></app-headers>
+  <!--Container Main start-->
+  <div class="container-fluid">
+  <div class=" bg-light">
+
+    <h4>Dashboard</h4>
+  </div>
+  <!--Container Main end-->
+  <div id="chart ">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [dataLabels]="chartOptions.dataLabels"
+      [plotOptions]="chartOptions.plotOptions"
+      [yaxis]="chartOptions.yaxis"
+      [legend]="chartOptions.legend"
+      [fill]="chartOptions.fill"
+      [stroke]="chartOptions.stroke"
+      [tooltip]="chartOptions.tooltip"
+      [xaxis]="chartOptions.xaxis"
+    ></apx-chart>
+
+
+    <div class="chart-container mt-5 mx-auto">
+      <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle"
+      [dataLabels]="chartDataLabels"></apx-chart>
+    </div>
+  </div>
+  </div>
+</body>

@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiserviceService {
   constructor(private httpService: HttpClient) {}
+  //country-list
   country() {
     return [
       {
@@ -29,6 +30,11 @@ export class ApiserviceService {
       },
     ];
   }
+  //end
+
+
+  //state-list
+
   state() {
     return [
       {
@@ -57,6 +63,9 @@ export class ApiserviceService {
       },
     ];
   }
+  //end
+
+  //city-list
 
   city() {
     return [
@@ -598,6 +607,10 @@ export class ApiserviceService {
       },
     ];
   }
+
+  //end
+
+  //automotive-compalint-list
   complaints() {
     return [
       {
@@ -662,6 +675,9 @@ export class ApiserviceService {
       },
     ];
   }
+//end
+
+//vehicle-list
   vehicle() {
     return [
       {
@@ -696,6 +712,9 @@ export class ApiserviceService {
       },
     ];
   }
+  //end
+
+  //vehicle-brand-types
   brands() {
     return [
       {
@@ -913,7 +932,10 @@ export class ApiserviceService {
       },
     ];
   }
+//end
 
+
+//vehicle-model-types
   model() {
     return [
       {
@@ -2057,6 +2079,9 @@ export class ApiserviceService {
       },
     ];
   }
+//end
+
+//service-center-names
   service() {
     return [
       {
@@ -2113,7 +2138,9 @@ export class ApiserviceService {
       },
     ];
   }
+//end
 
+//automotive-store-lists
   details = [
     {
       id: 1,
@@ -2166,16 +2193,539 @@ export class ApiserviceService {
       views: 0,
     },
   ];
+//end
 
-  help = [
+//automotive-store-lists
+Plumber_store_list = [
+  {
+    id: 1,
+    image:"./assets/store-details/store-img-1.png",
+   name: 'SKY Automobiles Service Center',
+   special: 'Powerfull Equipments',
+    city: 'TN-Chennai',
+    location: 'Aavadi, chennai',
+    quantity: 0,
+    views: 0,
+  },
+  {
+    id: 2,
+    image:"./assets/store-details/store-img-2.png",
+   name: 'Krishna Automobiles Service Center',
+   special: 'Powerfull Equipments',
+    city: 'TN-Coimbatore',
+    location: 'Raja st, Coimbatore',
+    quantity: 0,
+    views: 0,
+  },
+  {
+    id: 3,
+    image:"./assets/store-details/store-img-3.png",
+   name: 'Tokyo Car Service Center',
+   special: 'Powerfull Equipments',
+    city: 'TN-Madurai',
+    location: 'Karuppur, Kumbakonam',
+    quantity: 0,
+    views: 0,
+  },
+  {
+    id: 4,
+    image:"./assets/store-details/store-img-4.png",
+   name: 'Raja Bike Service Center',
+   special: 'Powerfull Equipments',
+    city: 'TN-Tuticorin',
+    location: 'New St, Tuticorin',
+    quantity: 0,
+    views: 0,
+  },
+  {
+    id:5,
+    image:"./assets/store-details/store-img-5.png",
+   name: 'Valley Multi Brand Service Center',
+   special: 'Powerfull Equipments',
+    city:'TN-Tiruchirappalli',
+    location: 'T.V.S Tolgate, Tiruchirappalli',
+    quantity: 0,
+    views: 0,
+  },
+];
+//end
+
+
+residential= [
+  {
+    id: 1,
+    type: 'plumber',
+    name: 'Plumber Service',
+  },
+  {
+    id:2,
+    type:'painter',
+    name: 'Painter Service',
+  },
+  {
+    id:3,
+    type:'Electrician',
+    name: 'Electrician Service',
+  },
+  {
+    id: 4,
+    type:'catering',
+    name: 'Catering Service',
+  },
+  {
+    id:5,
+    type:'maintenance',
+    name: 'Maintenance Service',
+  },
+  {
+    id:6,
+    type:'construction',
+    name: 'Construction Service',
+  },
+  {
+    id: 7,
+    type:'cleaner',
+    name: 'Cleaner Service',
+  },
+];
+//end
+
+
+//service-type
+
+service_type= [
+  {
+    id: 1,
+    type: 'plumber',
+  },
+  {
+    id:2,
+    type:'painter',
+  },
+  {
+    id:3,
+    type:'Electrician',
+  },
+  {
+    id: 4,
+    type:'catering',
+  },
+  {
+    id:5,
+    type:'maintenance',
+  },
+  {
+    id:6,
+    type:'construction',
+  },
+  {
+    id: 7,
+    type:'cleaner',
+  },
+];
+
+//end
+
+
+//plumber-service-types
+Plumber_service = [
+  {
+    id: 1,
+    type: 'plumber',
+    name: 'Installation',
+  },
+  {
+    id:2,
+    type: 'plumber',
+    name: 'Drain & Sewer Clearing',
+  },
+  {
+    id:3,
+    type: 'plumber',
+    name: 'Repair and Repalce',
+  },
+  {
+    id: 4,
+    type: 'plumber',
+    name: 'Remodelling',
+  },
+  {
+    id:5,
+    type: 'plumber',
+    name: 'Gas Fitting',
+  },
+  {
+    id:6,
+    type: 'plumber',
+    name: 'Water Heater Repair',
+  },
+  {
+    id: 7,
+    type: 'plumber',
+    name: 'Maintenance and Checks',
+  },
+  {
+    id:8,
+    type: 'plumber',
+    name: 'Emergency Plumbing',
+  },
+  {
+    id:9,
+    type: 'plumber',
+    name: 'Tap and Shower Fixture Repalcement',
+  },
+  {
+    id: 10,
+    type: 'plumber',
+    name: 'solar',
+  },
+  {
+    id: 1,
+    type: 'painter',
+    name: 'Interior & Exterior Paints',
+  },
+  {
+    id: 2,
+    type: 'painter',
+    name: 'Interior & Exterior Repaints',
+  },
+  {
+    id: 3,
+    type: 'painter',
+    name: 'Stains & Transparent Finishes',
+  },
+  {
+    id: 4,
+    type: 'painter',
+    name: 'High Performance Coating',
+  },
+  {
+    id: 5,
+    type: 'painter',
+    name: 'Achitectural Coating',
+  },
+  {
+    id: 6,
+    type: 'painter',
+    name: 'Floor Coating',
+  },
+  {
+    id: 7,
+    type: 'painter',
+    name: 'waterproofing',
+  },
+  {
+    id: 8,
+    type: 'painter',
+    name: 'Drywall',
+  },
+  {
+    id: 9,
+    type: 'painter',
+    name: 'Metal Door Painting',
+  },
+  {
+    id: 10,
+    type: 'painter',
+    name: 'Power Washing',
+  },
+  {
+    id: 1,
+    type: 'Electrician',
+    name: 'Electrical Setup & Rewiring',
+  },
+  {
+    id: 2,
+    type: 'Electrician',
+    name: 'Electrical Panel Install, Upgrade & Replace',
+  },
+  {
+    id: 3,
+    type: 'Electrician',
+    name: 'Whole House Surge Protection',
+  },
+  {
+    id: 4,
+    type: 'Electrician',
+    name: 'Switch & Outlet Install and Repair',
+  },
+  {
+    id: 5,
+    type: 'Electrician',
+    name: 'Ceiling Fan Install & Repair',
+  },
+  {
+    id: 6,
+    type: 'Electrician',
+    name: 'All Lighting Install, Repair & Repalce',
+  },
+  {
+    id: 7,
+    type: 'Electrician',
+    name: 'Smoke Carbon Monoxide Detector Install',
+  },
+  {
+    id: 8,
+    type: 'Electrician',
+    name: 'Exhaust Fan Installation',
+  },
+  {
+    id:9,
+    type: 'Electrician',
+    name: 'Outdoor, Pool & Hot-tub Wiring',
+  },
+  {
+    id: 10,
+    type: 'Electrician',
+    name: 'Electrical Safety Inspection',
+  },
+  {
+    id: 11,
+    type: 'Electrician',
+    name: 'All Electrical Maintenance & Repair',
+  },
+
+  {
+    id: 1,
+    type:'catering',
+    name: 'All Wedding Catering',
+  },
+  {
+    id: 2,
+    type:'catering',
+    name: 'Large-Scale Wedding',
+  },
+  {
+    id: 3,
+    type:'catering',
+    name: 'Intimate Weddings',
+  },
+  {
+    id: 4,
+    type:'catering',
+    name: 'Wedding Anniversaies',
+  },
+  {
+    id: 5,
+    type:'catering',
+    name: 'Birthday Catering Service',
+  },
+  {
+    id: 6,
+    type:'catering',
+    name: 'Bachelor Party',
+  },
+  {
+    id: 7,
+    type:'catering',
+    name: 'Events & Festival Catering',
+  },
+  {
+    id: 8,
+    type:'catering',
+    name: 'House Catering',
+  },
+  {
+    id: 9,
+    type:'catering',
+    name: 'Plated Service',
+  },
+  {
+    id: 10,
+    type:'catering',
+    name: 'Gueridon Service',
+  },
+  {
+    id: 11,
+    type:'catering',
+    name: 'Full Silver Service',
+  },
+  {
+    id: 12,
+    type:'catering',
+    name: 'Buffet Service',
+  },
+  {
+    id: 13,
+    type:'catering',
+    name: 'Cafeteria Service',
+  },
+
+  {
+    id:1,
+    type:'maintenance',
+    name: 'Regular Miantenance',
+  },
+  {
+    id:2,
+    type:'maintenance',
+    name: 'Corrective Maintenance',
+  },
+  {
+    id:3,
+    type:'maintenance',
+    name: 'Emergency Maintenance',
+  },
+  {
+    id:4,
+    type:'maintenance',
+    name: 'Preventative Maintenance',
+  },
+  {
+    id:5,
+    type:'maintenance',
+    name: 'Predictive Maintenance',
+  },
+  {
+    id:6,
+    type:'maintenance',
+    name: 'Risk-Based Maintenance',
+  },
+  {
+    id:7,
+    type:'maintenance',
+    name: 'Condition-Based Maintenance',
+  },
+  {
+    id:8,
+    type:'maintenance',
+    name: 'Time-Based Maintenance',
+  },
+  {
+    id:9,
+    type:'maintenance',
+    name: 'Failure Finding Maintenance',
+  },
+  {
+    id:10,
+    type:'maintenance',
+    name: 'Seasonal Maintenance',
+  },
+
+
+  {
+    id:1,
+    type:'construction',
+    name: 'Townhouses',
+  },
+  {
+    id:2,
+    type:'construction',
+    name: 'Multi-Family House',
+  },
+  {
+    id:3,
+    type:'construction',
+    name: 'Single Family House',
+  },
+  {
+    id:4,
+    type:'construction',
+    name: 'Room Fitting',
+  },
+  {
+    id:5,
+    type:'construction',
+    name: 'Door Fitting',
+  },
+  {
+    id:6,
+    type:'construction',
+    name: 'Wood-Frame House',
+  },
+  {
+    id:7,
+    type:'construction',
+    name: 'Bathroom Fitting',
+  },
+  {
+    id:8,
+    type:'construction',
+    name: 'House Recreation',
+  },
+  {
+    id:9,
+    type:'construction',
+    name: 'Windows Fitting',
+  },
+  {
+    id:10,
+    type:'construction',
+    name: 'Stairs Fitting',
+  },
+
+  {
+    id: 1,
+    type:'cleaner',
+    name: 'Regular Domestic Cleaning',
+  },
+  {
+    id: 2,
+    type:'cleaner',
+    name: 'Deep Cleaning',
+  },
+  {
+    id: 3,
+    type:'cleaner',
+    name: 'End of Tenancy Cleaning',
+  },
+  {
+    id: 4,
+    type:'cleaner',
+    name: 'Carpet Cleaning',
+  },
+  {
+    id: 5,
+    type:'cleaner',
+    name: 'Ironing',
+  },
+  {
+    id: 6,
+    type:'cleaner',
+    name: 'After Building Cleaning',
+  },
+  {
+    id: 7,
+    type:'cleaner',
+    name: 'Eco-friendly Cleaning',
+  },
+  {
+    id: 8,
+    type:'cleaner',
+    name: 'Window Cleaning',
+  },
+  {
+    id: 9,
+    type:'cleaner',
+    name: 'Washroom Cleaning',
+  },
+  {
+    id: 10,
+    type:'cleaner',
+    name: 'Toilet Cleaning',
+  },
+  {
+    id: 10,
+    type:'cleaner',
+    name: 'Kitchen Cleaning',
+  }
+];
+
+  contact = [
     {
-      name: 'Immediate Help',
+      id:1,
+      type:'radio',
+      name: 'Automotive',
     },
     {
-      name: 'Repair Spot Help',
+      id:2,
+      type:'radio',
+      name: 'Residential',
     },
     {
-      name: 'Others',
+      id:3,
+      type:'radio',
+      name: 'Commercial',
     },
   ];
 }

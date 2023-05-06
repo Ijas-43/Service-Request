@@ -1,0 +1,123 @@
+<app-header></app-header>
+<div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/banner/contacts.jpg" class="d-block w-100" alt="banner-1" height="400">
+      <div class="carousel-caption text-uppercase py-5 banner-padding">
+        <p class="text-white fs-1 fw-bold text-uppercase mb-0">contact us
+        </p>
+        <p class="text-white fs-4 fw-semibold">How Can We Help You?</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container my-5">
+  <div class="row">
+    <div class="text-center">
+      <h2 class="fw-bold text-uppercase">contact</h2>
+      <hr class="mb-4 mt-0 d-inline-block mx-auto underline-size">
+      <p class="fst-italic">we'd love to hear from you. send us a message and we will respond as soon as
+        possible.</p>
+    </div>
+    <div class="col-md-6">
+      <div class="location box-shadow text-center rounded-3 mt-4 py-5">
+        <div class="location_details ">
+          <i class='bx bx-map location_icon  p-2'></i>
+          <h5 class="fs-5 mt-2 fw-bold addresss text-secondary">Our Address</h5>
+          <p class="mb-0">Dallas-Texas ,United States Of America <br> Tamilnadu-Chennai ,India</p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box-shadow text-center rounded-3 mt-4 py-5">
+            <div class="details ">
+              <i class='bx bx-envelope location_icon  p-2'></i>
+
+              <h5 class="fs-5 mt-2 fw-bold addresss text-secondary">Email Us</h5>
+              <p class="mb-0">infoonclick22@gmail.com <br>
+                training@infoonclick.com</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="location box-shadow text-center rounded-3 mt-4 py-5">
+            <div class="details ">
+              <i class='bx bx-phone-call location_icon  p-2'></i>
+              <h5 class="fs-5 mt-2 fw-bold addresss text-secondary">Call Us</h5>
+              <p class="mb-0">+1 469 740 7590 <br>
+                +91 893 979 9975</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="box-shadow text-center rounded-3 mt-4 py-4 px-4">
+        <form class="row g-3 ">
+          <div class="col-md-6">
+            <input type="text" class="form-control text-secondary" id="inputText" placeholder="Your Name">
+          </div>
+          <div class="col-md-6">
+
+            <input type="email" class="form-control text-secondary " id="inputEmail4" placeholder="Your Email">
+          </div>
+
+          <div class="col-md-6">
+            <select id="inputState" class="form-select text-secondary form-control " (change)="onSelect($event)">
+              <option selected>Select State</option>
+              <option *ngFor="let states of state" value="{{states.state}}">{{states.name}}</option>
+
+            </select>
+          </div>
+
+          <div class=" col-md-6">
+            <select id="inputState" class="form-select text-secondary  form-control ">
+              <option selected>Select City</option>
+              <option *ngFor="let cities of city">{{cities.name}}</option>
+
+            </select>
+          </div>
+          <div class="col-md-6 col-6">
+            <div class="input-group">
+              <span class="input-group-text " id="basic-addon1">+91</span>
+              <input type="number" name="email" id="exampleInputNumber" placeholder="Enter Your Mobile Number"
+                class="form-control text-secondary " aria-describedby="numberHelp" required>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control text-secondary" id="inputText" placeholder="Subject">
+          </div>
+          <div class="col-md-12">
+            <p class="text-secondary text-start fw-semibold">Service Type:</p>
+            <div class="row">
+              <div class="col-md-4 form-check" *ngFor="let contacts of contact">
+                <input class="form-check-input ms-0 me-0" type="{{contacts.type}}" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="me-0 form-check-label fw-semibold" for="flexCheckDefault">
+                  {{contacts.name}}
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
+              placeholder="Message"></textarea>
+          </div>
+
+          <div class="col-12 text-center mb-2">
+            <button type="submit" class="btn btn-green text-white px-5 py-2">Send Message</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

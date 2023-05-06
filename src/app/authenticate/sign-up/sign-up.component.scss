@@ -1,0 +1,224 @@
+:root {
+  --primary-color: rgb(11, 78, 179);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #f2edf0;
+}
+/* Global Stylings */
+// label {
+//   display: block;
+//   margin-bottom: 0.5rem;
+// }
+
+input,select {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  // border-radius: 0.25rem;
+  border-radius: 8px;
+  background: #f2edf0;
+  box-shadow:  5px 5px 13px #b8b4b6,
+               -5px -5px 13px #ffffff;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  // background-color: rgb(19, 139, 19);
+  width: 0%;
+  transition: 0.3s;
+  border-radius: 6px;
+background: #4c9c35;
+box-shadow: inset 5px 5px 10px #3e7e2b,
+            inset -5px -5px 10px #5aba3f;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  border-radius: 6px;
+background: #4c9c35;
+box-shadow: inset 5px 5px 10px #3e7e2b,
+            inset -5px -5px 10px #5aba3f;
+  // background-color: rgb(19, 139, 19);
+  color: #f3f3f3;
+}
+
+/* Form */
+.form {
+  width: clamp(320px, 30%, 430px);
+  margin: 0 auto;
+  // border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+  border-radius: 23px;
+background: #f2edf0;
+box-shadow:  15px 15px 36px #8c898b,
+             -15px -15px 36px #ffffff;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  // background-color: rgb(19, 139, 19);
+  color: #f3f3f3;
+  text-align: center;
+  // border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 14px;
+background: #4c9c35;
+box-shadow: inset 15px 15px 30px #366f26,
+            inset -15px -15px 30px #62c944;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgb(19, 139, 19);
+}
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+#checkbox{
+  width:50px;
+  height: 50px;
+  background-color: #366f26;
+  
+  border-radius: 25px;
+  background: #f2edf0;
+  box-shadow:  5px 5px 13px #b8b4b6,
+               -5px -5px 13px #ffffff;
+}
+#checkbox :checked{
+  color:#366f26
+  
+}
